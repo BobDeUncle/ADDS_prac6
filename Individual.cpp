@@ -49,6 +49,9 @@ int Individual::getMaxOnes() {
       currentLength = 0; 
     }
   }
+  if (currentLength > maxLength) {
+    maxLength = currentLength;
+  }
   return maxLength;
 };
 
