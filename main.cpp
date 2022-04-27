@@ -9,9 +9,7 @@
 using namespace std;
 
 Individual * execute(Individual * indPtr, Mutator * mPtr, int k) {
-  Individual * offspringPtr;
-  Individual offspring = mPtr->mutate((*indPtr), k);
-  offspringPtr = &offspring;
+  Individual * offspringPtr = new Individual(mPtr->mutate((*indPtr), k).getString());
   return offspringPtr;
 }
 
